@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [View solution on Frontend Mentor](https://www.frontendmentor.io/solutions/)
+-   Solution URL: [View solution on Frontend Mentor](https://www.frontendmentor.io/solutions/nft-component-using-flexbox-and-pseudo-element-9Js2frH969)
 -   Live Site URL: [View live site](https://alexander3717.github.io/NFTComponent/)
 
 ## My process
