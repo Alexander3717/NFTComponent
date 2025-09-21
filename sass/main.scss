@@ -1,0 +1,126 @@
+@use "setup" as *;
+
+// Constants
+$nft-card-width: 95%;
+$nft-card-max-width: 350px;
+$nft-card-padding: $spacing-300;
+$nft-card-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+$nft-card-border-radius: 15px;
+
+// Base styles
+body {
+    padding: $spacing-300 0;
+    background-color: $colors-blue-950;
+    @include flex(column, center);
+}
+
+main {
+    @include flex(row, center);
+}
+
+// Components
+.nft-card {
+    width: $nft-card-width;
+    max-width: $nft-card-max-width;
+    background-color: $colors-blue-900;
+    border-radius: $nft-card-border-radius;
+    padding: $nft-card-padding;
+    box-shadow: $nft-card-shadow;
+
+    @include flex(column, $gap: $spacing-300);
+}
+
+.nft-card__image {
+    border-radius: $nft-card-border-radius;
+    overflow: hidden;
+
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: url("images/icon-view.svg");
+        position: absolute;
+        background-color: hsl(178, 100%, 50%, 0.5);
+        inset: 0;
+        @include flex(row, center, center);
+
+        opacity: 0;
+
+        transition: opacity 0.2s;
+    }
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.nft-card__text {
+    @include flex(column, $gap: $spacing-200);
+}
+
+.nft-card__title {
+    @include text-preset-1;
+    color: white;
+}
+
+.nft-card__description {
+    @include text-preset-2;
+    color: $colors-blue-500;
+}
+
+.nft-card__info {
+    @include flex(row, space-between);
+
+    &-price {
+        @include text-preset-3-semibold;
+        color: $colors-cyan-400;
+
+        @include flex(row, flex-start, center, $spacing-100);
+    }
+
+    &-countdown {
+        @include text-preset-3;
+        color: $colors-blue-500;
+
+        @include flex(row, flex-start, center, $spacing-100);
+    }
+}
+
+.currency-icon {
+    width: 11px;
+    height: 18px;
+}
+
+.clock-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.dividing-line {
+    border-top: 1px solid $colors-blue-800;
+}
+
+.nft-card__footer {
+    @include flex(row, flex-start, center, $spacing-200);
+
+    &-image {
+        width: 33px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        border: 1px solid white;
+    }
+
+    &-author {
+        @include text-preset-3;
+        color: $colors-blue-500;
+
+        @include flex(row, $gap: $spacing-100);
+
+        &-name {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

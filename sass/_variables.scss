@@ -1,0 +1,53 @@
+@use "functions" as *;
+
+// colors
+$colors-black: #000000;
+$colors-white: #ffffff;
+$colors-blue-500: #8bacd9;
+$colors-blue-800: #2e405a;
+$colors-blue-900: #15263f;
+$colors-blue-950: #0d192c;
+$colors-cyan-400: #00fff8;
+
+//spacings
+$spacing-0: 0px;
+$spacing-100: 8px;
+$spacing-200: 16px;
+$spacing-300: 24px;
+
+// text presets
+@mixin text-base {
+    color: inherit;
+    font-family: Outfit;
+    font-style: normal;
+    font-feature-settings: "liga" off, "clig" off;
+}
+
+// desktop
+@mixin text-preset-1 {
+    @include text-base;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 125%; /* 27.5px */
+}
+
+@mixin text-preset-2 {
+    @include text-base;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 145%; /* 26.1px */
+}
+
+@mixin text-preset-3 {
+    @include text-base;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 125%; /* 20px */
+}
+
+@mixin text-preset-3-semibold {
+    @include text-base;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 125%; /* 20px */
+}
