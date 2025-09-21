@@ -18,6 +18,14 @@ main {
     @include flex(row, center);
 }
 
+a {
+    text-decoration: none;
+
+    :hover {
+        color: $colors-cyan-400;
+    }
+}
+
 // Components
 .nft-card {
     width: $nft-card-width;
@@ -119,8 +127,11 @@ main {
         @include flex(row, $gap: $spacing-100);
 
         &-name {
-            text-decoration: none;
             color: white;
+
+            &:hover {
+                color: $colors-cyan-400;
+            }
         }
     }
 }

@@ -49,6 +49,13 @@ main {
   gap: 0;
 }
 
+a {
+  text-decoration: none;
+}
+a :hover {
+  color: #00fff8;
+}
+
 .nft-card {
   width: 95%;
   max-width: 350px;
@@ -197,8 +204,10 @@ main {
   gap: 8px;
 }
 .nft-card__footer-author-name {
-  text-decoration: none;
   color: white;
+}
+.nft-card__footer-author-name:hover {
+  color: #00fff8;
 }
 
 /*# sourceMappingURL=style.css.map */
